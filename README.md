@@ -49,7 +49,7 @@ Code for reproducing experiments in ["McGAN"](https://doi.org/10.1145/19.nn).
 ## 3. Project structure
 
 - **src** : Put all source code for production within structured directory
-- **data** : Include example a small amount of data in the Github repository so tests can be run to validate installatio
-- **static** : Any images or content to include in the README or web framework if part of the pipeline
+- **datasets** : Include example a small amount of data in the Github repository so tests can be run to validate installatio
+- **jar** : Any libs or content to include in the README or web framework if part of the pipeline
 - to be continueed
 
