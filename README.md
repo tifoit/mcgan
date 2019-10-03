@@ -7,8 +7,8 @@ Code for reproducing experiments in ["McGAN"](https://doi.org/10.1145/19.nn).
 ## 1. Prerequisites
 
 - Python, NumPy, TensorFlow, SciPy, Matplotlib
-- A recent NVIDIA GPU
-- Tested on Nvidia K80 GPU with CUDA 9.0, with Anaconda Python 3.6+
+- A recent NVIDIA GPU 
+- Tested on Nvidia Titan X GPU with CUDA 9.0, with Anaconda Python 3.6+
 
 ## 2. Instructions on running the code on your machine
 
