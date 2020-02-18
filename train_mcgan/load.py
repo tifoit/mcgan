@@ -5,7 +5,7 @@ from fuel.streams import DataStream
 from time import time
 
 
-def load_imgs(ntrain=None, ntest=None, batch_size=128, data_file=None):
+def load_imgs(ntrain=None, ntest=None, batch_size=256, data_file=None):
     t = time()
     print('LOADING DATASET...')
     path = os.path.join(data_file)
@@ -32,7 +32,7 @@ def load_imgs(ntrain=None, ntest=None, batch_size=128, data_file=None):
     return tr_data, te_data, tr_stream, te_stream, ntrain, ntest
 
 
-def load_imgs_seq(ntrain=None, ntest=None, batch_size=128, data_file=None):
+def load_imgs_seq(ntrain=None, ntest=None, batch_size=256, data_file=None):
     t = time()
     print('LOADING DATASET...')
     path = os.path.join(data_file)
@@ -60,6 +60,7 @@ def load_imgs_raw(ntrain=None, ntest=None, data_file=None):
     t = time()
     print('LOADING DATASET...')
     path = os.path.join(data_file)
+    
     tr_data = H5PYDataset(path, which_sets=('train',))
     te_data = H5PYDataset(path, which_sets=('test',))
 
@@ -68,7 +69,10 @@ def load_imgs_raw(ntrain=None, ntest=None, data_file=None):
     if ntest is None:
         ntest = te_data.num_examples
 
-    print('name = %s, ntrain = %d, ntest = %d' % (data_file, ntrain, ntest))
     print('%.2f seconds to load data' % (time() - t))
 
+    print('name = %s, ntrain = %d, ntest = %d' % (data_file, ntrain, ntest))
+    
     return tr_data, te_data, ntrain, ntest
+
+
